@@ -1,0 +1,34 @@
+.about {
+  @include adaptive-value('padding-bottom', 75, 50, 1);
+  @include adaptive-value('padding-top', 75, 50, 1);
+
+  &__title {
+    @include adaptive-value('margin-bottom', 35, 25, 1);
+    font-weight: 500;
+    max-width: 815px;
+
+    span {
+      text-decoration: underline;
+      color: var(--color-accent);
+    }
+  }
+
+  &__list {
+    max-width: 935px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value('gap', 85, 20, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns:  1fr;
+    }
+  }
+
+  &__item {
+    font-size: 17px;
+    span {
+      display: block;
+      font-weight: 700;
+    }
+  }
+}

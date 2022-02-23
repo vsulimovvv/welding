@@ -1,0 +1,59 @@
+.form-send {
+  width: 100%;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-bottom: 35px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+
+  &__group {
+    width: 100%;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      left: 23px;
+      width: 20px;
+      height: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #cbd5dd;
+      @include breakpointsMaxW($bp-768) {
+        left: 15px;
+      }
+    }
+
+    &--name {
+      &::after {
+        @include maskImage(url('../images/icons/user.svg'), contain);
+      }
+    }
+
+    &--phone {
+      &::after {
+        @include maskImage(url('../images/icons/phone.svg'), contain);
+      }
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 16px 22px 16px 62px;
+    background-color: #f3f7fa;
+    border: 1px solid #d4dce2;
+    border-radius: 10px;
+    font-size: 16px;
+    @include breakpointsMaxW($bp-768) {
+      font-size: 14px;
+      padding-left: 50px;
+    }
+  }
+}

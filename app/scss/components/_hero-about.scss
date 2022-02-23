@@ -1,0 +1,27 @@
+.hero-about {
+  @include background(cover);
+
+  &__wrapper {
+    height: 425px;
+    position: relative;
+  }
+
+  &__offer {
+    max-width: 625px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 30px 40px;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+
+    @include adaptive-value('padding-top', 30, 15, 1);
+    @include adaptive-value('padding-bottom', 30, 15, 1);
+    @include adaptive-value('padding-left', 40, 20, 1);
+    @include adaptive-value('padding-right', 40, 20, 1);
+  }
+
+  &__title {
+    margin-bottom: 22px;
+  }
+}

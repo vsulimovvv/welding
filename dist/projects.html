@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Favicon -->
+ <link rel="shortcut icon" href="images/logo-small.png" type="image/x-icon">
+
+ <!-- Link Swiper's CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+ <!-- nouislider -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+
+ <!-- Custom Link -->
+ <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Сварочные Технологии</title>
+  </head>
+
+  <body>
+    <h1 class="visually-hidden">О нас</h1>
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="container">
+    <nav class="main-menu">
+      <a href="#" class="header__logo logo">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Услуги</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Собаки</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Кошки</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Каталог</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Собаки</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Кошки</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-menu__tools">
+        <a class="main-menu__phone phone" href="tel:+74954886528">
+          <span class="icon"></span>
+          <span>8 (495) 488 65 28</span>
+        </a>
+
+        <button class="main-menu__btn btn">Заказать звонок</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+      <!-- <div class="breadcrumbs breadcrumbs--left">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#"> Женщинам </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link">Пальто женское</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <main class="main">
+        <section class="projects">
+  <div class="container">
+    <h2 class="projects__title section-title">Наши проекты</h2>
+    <div class="projects__content">
+      <ul class="projects__list">
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/1.jpg" alt="Резервуар " />
+            </div>
+            <h3 class="project-card__title">Резервуар хранения воды 5 м3</h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/2.jpg" alt="Ёмкость " />
+            </div>
+            <h3 class="project-card__title">
+              Ёмкость с теплоизоляцией для горячей воды
+            </h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами
+                DVS.Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/3.jpg" alt="Резервуар " />
+            </div>
+            <h3 class="project-card__title">Емкости для коагулянта и щелочи</h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/4.jpg" alt="Резервуар " />
+            </div>
+            <h3 class="project-card__title">Резервуар хранения воды 5 м3</h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/5.jpg" alt="Резервуар " />
+            </div>
+            <h3 class="project-card__title">Ёмкость с теплоизоляцией для горячей воды</h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+        <li class="projects__item">
+          <article class="project-card">
+            <div class="project-card__img">
+              <img src="images/content/projects/6.jpg" alt="Резервуар " />
+            </div>
+            <h3 class="project-card__title">Емкости для коагулянта и щелочи</h3>
+            <div class="project-card__text">
+              <p>
+                Производился в специальных расчетно-аналитических и CAD
+                программах в соответствии с европейскими стандартами DVS.
+              </p>
+            </div>
+
+            <a class="project-card__btn btn btn--transparent" href="#">
+              Смотреть проект
+            </a>
+          </article>
+        </li>
+      </ul>
+
+      <button class="projects__btn" type="button">загрузить еще</button>
+    </div>
+  </div>
+</section>
+
+        <section class="contacts">
+  <div class="container">
+    <div class="contacts__top">
+      <h2 class="contacts__title section-title">
+        <span class="section-title__underline">Свяжитесь с нами</span>
+      </h2>
+    </div>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--phone" href="tel:+74951234567">
+          <span class="contacts__label">Телефон:</span>
+          8 (495) 123 45 67
+        </a>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__link contacts__link--location" href="#">
+          <span class="contacts__label">Адрес:</span>
+          Москва, Название улицы 10, офис 11
+        </div>
+      </li>
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--schedule"
+          href="mailto:info@autotradis.ru"
+        >
+          <span class="contacts__label">Режим работы:</span>пн - пт с 09:00 до
+          19:00, сб - вс - выходные
+        </a>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--instagram"
+                aria-label="instagram"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--whatsapp"
+                aria-label="whatsapp"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--telegram"
+                aria-label="telegram"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="contacts__map map">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a059d9111ae1df67351251cdfa5eaf67fe1ea4c5c7efd377930f089402a57f2&amp;source=constructor"
+      width="100%"
+      height="410"
+      frameborder="0"
+    ></iframe>
+  </div>
+</section>
+
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <nav class="main-menu">
+      <a href="#" class="header__logo logo">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-menu__tools">
+        <a class="main-menu__phone phone" href="tel:+74954886528">
+          <span class="icon"></span>
+          <span>8 (495) 488 65 28</span>
+        </a>
+
+        <button class="main-menu__btn btn">Заказать звонок</button>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__middle">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__info">
+          <address class="footer__address">
+            Адрес: МО, г. Клин, ул. Менделеева, д 16, пом. 1/2
+          </address>
+          <div class="footer__schedule">
+            Режим работы: пн - пт с 09:00 до 19:00 | сб - вс - выходные
+          </div>
+        </div>
+
+        <div class="footer__policy">
+          <a href="#">Политика конфиденциальности </a>
+          <a href="#">Карта сайта </a>
+        </div>
+
+        <a
+          class="footer__by"
+          href="https://razrabotka-saita.ru/"
+          target="_blank"
+        >
+          <span>Разработка</span>
+          <img src="images/company-logo.png" alt="Адванс Медив" />
+        </a>
+
+        <div class="footer__contacts">
+          <a class="footer__phone" href="tel:+74954886528">
+            <span>Телефон:</span> +7 (495) 488 65 28
+          </a>
+          <a class="footer__mail" href="mailto:weldertechs@gmail.com">
+            <span>E-mail:</span> weldertechs@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© 2022 Все права защищены</p>
+  </div>
+</footer>
+
+    </div>
+
+      <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- nouislider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- JS -->
+  <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+.reviews {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  @include adaptive-value('padding-bottom', 70, 40, 1);
+
+  background-color: var(--color-bg);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    margin-bottom: 50px;
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 470px;
+    font-size: 16px;
+    color: #5a5e60;
+  }
+
+  &__content {
+    padding-left: 85px;
+    position: relative;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      width: 15px;
+      height: 15px;
+
+      &::after {
+        @include elDef();
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include maskImage(url('../images/icons/chevron.svg'), contain);
+        background-color: var(--color-dark);
+      }
+    }
+    .swiper-button-prev {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .swiper-button-next {
+      transform: translate(-50%, -50%) rotate(-90deg);
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__slider {
+    padding-bottom: 40px;
+  }
+
+  &__slide {
+    max-width: 350px;
+    width: 100%;
+
+    img {
+      @include img(cover);
+    }
+  }
+}

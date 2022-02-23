@@ -1,0 +1,52 @@
+.advantages {
+  @include adaptive-value('padding-top', 85, 40, 1);
+  @include adaptive-value('padding-bottom', 85, 40, 1);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include adaptive-value('margin-bottom', 70, 30, 1);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: #e1f0fa;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 340px));
+    justify-content: space-between;
+    gap: 85px 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 340px));
+      justify-content: center;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+  }
+}

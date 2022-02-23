@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Сварочные Технологии</title>
+  </head>
+
+  <body>
+    <h1 class="visually-hidden">Ёмкостное оборудование</h1>
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+      <main class="main">
+        <div class="container">
+          <div class="grid">
+            <div class="grid__content">
+              <div class="grid__sidebar">
+                @include('./components/_sidebar-service.html')
+              </div>
+              <div class="grid__right">
+                @include('./components/_descr-service.html')
+                @include('./components/_about.html')
+                @include('./components/_catalog-small.html')
+                @include('./components/_send.html')
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>

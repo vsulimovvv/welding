@@ -1,0 +1,103 @@
+.header {
+  border-bottom: 1px solid #eaeaea;
+  
+  &__toggle {
+    display: block;
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 350ms ease-in;
+
+    @include breakpointsMaxW($bp-991) {
+      margin-left: auto;
+    }
+
+    &-line {
+      border-radius: 3px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-dark);
+      position: relative;
+      transition: 150ms ease-in;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: inherit;
+        transition: 450ms ease-in;
+        border-radius: 3px;
+      }
+
+      &::after {
+        top: -7px;
+      }
+
+      &::before {
+        bottom: -7px;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.main-menu {
+  padding: 25px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__phone {
+    font-size: 17px;
+    color: #282828;
+    padding-left: 43px;
+    position: relative;
+
+    .icon {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: #eceff8;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::after {
+        @include elDef();
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        @include maskImage(url('../images/icons/phone.svg'), contain);
+        background-color: #a9adbc;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 15px 17px;
+    font-size: 13px;
+  }
+}

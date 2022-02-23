@@ -1,0 +1,18 @@
+.single-service {
+  &__preview {
+    width: 100%;
+    height: 349px;
+    @include background(cover);
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @include adaptive-value('font-size', 30, 20, 1);
+    line-height: 1.25;
+  }
+
+  &__text {
+    color: #282828;
+  }
+}

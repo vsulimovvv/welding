@@ -1,0 +1,31 @@
+.services {
+  @include adaptive-value('padding-top', 85, 40, 1);
+  @include adaptive-value('padding-bottom', 85, 40, 1);
+  &__title {
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 405px));
+      justify-content: center;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: minmax(auto, 405px);
+    }
+  }
+
+  &__item {
+    height: 100%;
+    width: 100%;
+  }
+}

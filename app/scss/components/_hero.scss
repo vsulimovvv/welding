@@ -1,0 +1,41 @@
+.hero {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 440px;
+    gap: 40px;
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__offer {
+    max-width: 388px;
+  }
+
+  &__title {
+    @include adaptive-value('font-size', 45, 30, 1);
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__slider{
+    padding-bottom: 30px;
+  }
+
+  &__preview {
+    max-width: 895px;
+    height: 100%;
+
+    img {
+      @include img(contain);
+    }
+  }
+
+}

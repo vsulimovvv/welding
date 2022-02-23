@@ -1,0 +1,61 @@
+.socials {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: var(--color-accent);
+    border-radius: 8px;
+    transition: background-color 150ms ease;
+    border: 1px solid var(--color-eccent);
+    transition: 150ms ease;
+
+    @include breakpointsMaxW($bp-768) {
+      width: 34px;
+      height: 34px;
+    }
+
+    &:hover {
+      background-color: var(--color-white);
+      border-color: #d2d2d2;
+
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+
+    &--instagram {
+      &::after {
+        @include maskImage(url('../images/icons/instagram.svg'), 100%);
+      }
+    }
+    &--whatsapp {
+      &::after {
+        @include maskImage(url('../images/icons/whatsapp.svg'), 100%);
+      }
+    }
+    &--telegram {
+      &::after {
+        @include maskImage(url('../images/icons/telegram.svg'), 100%);
+      }
+    }
+
+    &::after {
+      transition: background-color 150ms ease;
+      @include elDef();
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-white);
+      transition: 150ms ease;
+    }
+  }
+}

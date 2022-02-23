@@ -1,0 +1,66 @@
+.benefits {
+  @include adaptive-value('padding-top', 55, 35, 1);
+  @include adaptive-value('padding-bottom', 35, 25, 1);
+  border-top: 1px solid #eeeeee;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 110px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 50px;
+    }
+    @include breakpointsMaxW($bp-container) {
+      gap: 30px;
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: minmax(auto, 350px);
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    padding-top: 75px;
+    position: relative;
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+    }
+
+    &::after {
+      @include elDef();
+      width: 50px;
+      height: 50px;
+      top: 0;
+      left: 0;
+      background-color: var(--color-accent);
+
+      @include breakpointsMaxW($bp-768) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--own {
+      &::after {
+        @include maskImage(url('../images/content/benefits/1.svg'), contain);
+      }
+    }
+    &--experience {
+      &::after {
+        @include maskImage(url('../images/content/benefits/2.svg'), contain);
+      }
+    }
+
+    &--quality {
+      &::after {
+        @include maskImage(url('../images/content/benefits/3.svg'), contain);
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+}

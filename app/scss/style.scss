@@ -1,0 +1,42 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/breadcrumbs';
+@import './components/menu';
+@import './components/form';
+@import './components/form-send';
+@import './components/custom-checkbox';
+@import './components/socials';
+
+// * ===== Card Components
+@import './components/card-product';
+@import './components/card-projects';
+@import './components/card-services';
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/hero';
+@import './components/catalog';
+@import './components/advantages';
+@import './components/about';
+@import './components/partners';
+@import './components/reviews';
+@import './components/request';
+@import './components/hero-about';
+@import './components/descr';
+@import './components/team';
+@import './components/benefits';
+@import './components/contacts';
+@import './components/projects';
+@import './components/services';
+@import './components/single-service';
+@import './components/sidebar';
+@import './components/send';

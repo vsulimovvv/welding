@@ -1,0 +1,62 @@
+.sidebar {
+  max-width: 340px;
+  width: 100%;
+  @include adaptive-value('margin-top', 60, 40, 1);
+  background-color: var(--color-bg);
+  padding-bottom: 65px;
+  
+  @include breakpointsMaxW($bp-991) {
+    max-width: 100%;
+  }
+
+  &__top {
+    padding: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  &__title {
+    @include adaptive-value('font-size', 25, 20, 1);
+  }
+
+  &__list {
+    padding-top: 32px;
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    padding-left: 70px;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 22px;
+      height: 22px;
+      left: 35px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include maskImage(
+        url('../images/content/services/icons/1.svg'),
+        contain
+      );
+      background-color: #c5c5c5;
+    }
+
+    &--active {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 235px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
