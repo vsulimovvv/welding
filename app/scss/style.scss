@@ -15,6 +15,11 @@
 @import './components/custom-checkbox';
 @import './components/socials';
 @import './components/tabs-spec';
+@import './components/custom-select';
+@import './components/filters-catalog';
+@import './components/pagination';
+@import './components/menu-mobile';
+@import './components/accordion';
 
 // * ===== Card Components
 @import './components/card-product';
@@ -25,7 +30,7 @@
 @import './components/footer';
 @import './components/header';
 @import './components/hero';
-@import './components/catalog';
+@import './components/products';
 @import './components/advantages';
 @import './components/about';
 @import './components/partners';
@@ -42,3 +47,4 @@
 @import './components/sidebar';
 @import './components/send';
 @import './components/card-capacity';
+@import './components/catalog';

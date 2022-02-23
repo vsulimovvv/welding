@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/logo-small.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Сварочные Технологии</title>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Главная</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Изготовление емкостей
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Изготовление трубопроводов
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Сварка</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Каталог
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Горизонтальные емкости
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Вертикальные емкости
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Подземные емкости</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Воздухосборники</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Для хранения пенообразователя
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Баки-дозаторы пожаротушения
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Баки мембранные</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Жироуловители</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Для приемки и хранениях молока
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Емкости ЦКТ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Наши проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О нас контакты</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__bottom">
+      <button class="mobile-menu__btn btn" type="button">
+        Заказать звонок
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav class="main-menu">
+      <a href="#" class="header__logo logo">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Услуги</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Изготовление емкостей</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Изготовление трубопроводов
+                  </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Сварка</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Каталог</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Горизонтальные емкости</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Вертикальные емкости</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Подземные емкости</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Воздухосборники</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Для хранения пенообразователя
+                  </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Баки-дозаторы пожаротушения
+                  </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Баки мембранные</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Жироуловители</a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">
+                    Для приемки и хранениях молока
+                  </a>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Емкости ЦКТ</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-menu__tools">
+        <a class="main-menu__phone phone" href="tel:+74954886528">
+          <span class="icon"></span>
+          <span>8 (495) 488 65 28</span>
+        </a>
+
+        <button class="main-menu__btn btn">Заказать звонок</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+      <main class="main">
+        <div class="grid">
+  <div class="container">
+    <div class="grid__content">
+      <div class="grid__sidebar">
+        <aside class="sidebar sidebar--catalog">
+          <div class="sidebar__top">
+            <h3 class="sidebar__title">Каталог</h3>
+          </div>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a class="sidebar__link sidebar__link--active" href="#">
+                <span>Горизонтальные емкости</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Вертикальные емкости</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Подземные емкости</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Воздухосборники</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Для хранения пенообразователя</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Баки-дозаторы пожаротушения</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Баки мембранные</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Жироуловители</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Для приемки и хранениях молока</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="#">
+                <span>Емкости ЦКТ</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="grid__right">
+        <section class="catalog">
+          <div class="container">
+            <div class="catalog__filters filters-catalog">
+              <ul class="filters-catalog__list">
+                <li class="filters-catalog__item">
+                  <select class="select" name="steel" id="steel">
+                    <option value="1">Выберите тип стали</option>
+                    <option value="2">Выберите тип стали</option>
+                    <option value="3">Выберите тип стали</option>
+                    <option value="4">Выберите тип стали</option>
+                  </select>
+                </li>
+                <li class="filters-catalog__item">
+                  <select class="select" name="volume" id="volume">
+                    <option value="1">Выберите объём</option>
+                    <option value="2">Выберите объём</option>
+                    <option value="3">Выберите объём</option>
+                    <option value="4">Выберите объём</option>
+                  </select>
+                </li>
+                <li class="filters-catalog__item">
+                  <select class="select" name="pressure" id="pressure">
+                    <option value="1">Давление</option>
+                    <option value="2">Давление</option>
+                    <option value="3">Давление</option>
+                    <option value="4">Давление</option>
+                  </select>
+                </li>
+                <li class="filters-catalog__item">
+                  <select class="select" name="appointment" id="appointment">
+                    <option value="1">Назначение</option>
+                    <option value="2">Назначение</option>
+                    <option value="3">Назначение</option>
+                    <option value="4">Назначение</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/1.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/2.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/3.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/4.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/5.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/6.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/7.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/8.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/9.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/10.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/11.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+              <li class="catalog__item">
+                <article class="catalog-card">
+                  <div class="catalog-card__img">
+                    <img src="images/content/catalog/12.jpg" alt="Резервуар" />
+                  </div>
+                  <h3 class="catalog-card__title">
+                    <a href="#">
+                      Резервуар горизонтальный стальной наземный (РГСН)
+                    </a>
+                  </h3>
+                </article>
+              </li>
+            </ul>
+
+            <div class="catalog__pagination pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--active" href="#">
+                    1
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">...</li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">Далее</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <section class="contacts">
+  <div class="container">
+    <div class="contacts__top">
+      <h2 class="contacts__title section-title">
+        <span class="section-title__underline">Свяжитесь с нами</span>
+      </h2>
+    </div>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--phone" href="tel:+74951234567">
+          <span class="contacts__label">Телефон:</span>
+          8 (495) 123 45 67
+        </a>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__link contacts__link--location" href="#">
+          <span class="contacts__label">Адрес:</span>
+          Москва, Название улицы 10, офис 11
+        </div>
+      </li>
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--schedule"
+          href="mailto:info@autotradis.ru"
+        >
+          <span class="contacts__label">Режим работы:</span>пн - пт с 09:00 до
+          19:00, сб - вс - выходные
+        </a>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--instagram"
+                aria-label="instagram"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--whatsapp"
+                aria-label="whatsapp"
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href="#"
+                class="socials__link socials__link--telegram"
+                aria-label="telegram"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="contacts__map map">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a059d9111ae1df67351251cdfa5eaf67fe1ea4c5c7efd377930f089402a57f2&amp;source=constructor"
+        width="100%"
+        height="410"
+        frameborder="0"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+      </main>
+
+      <footer class="footer">
+  <div class="container">
+    <nav class="main-menu">
+      <a href="#" class="header__logo logo">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <div class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Наши проекты</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-menu__tools">
+        <a class="main-menu__phone phone" href="tel:+74954886528">
+          <span class="icon"></span>
+          <span>8 (495) 488 65 28</span>
+        </a>
+
+        <button class="main-menu__btn btn">Заказать звонок</button>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__middle">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="footer__info">
+          <address class="footer__address">
+            Адрес: МО, г. Клин, ул. Менделеева, д 16, пом. 1/2
+          </address>
+          <div class="footer__schedule">
+            Режим работы: пн - пт с 09:00 до 19:00 | сб - вс - выходные
+          </div>
+        </div>
+
+        <div class="footer__policy">
+          <a href="#">Политика конфиденциальности </a>
+          <a href="#">Карта сайта </a>
+        </div>
+
+        <a
+          class="footer__by"
+          href="https://razrabotka-saita.ru/"
+          target="_blank"
+        >
+          <span>Разработка</span>
+          <img src="images/company-logo.png" alt="Адванс Медив" />
+        </a>
+
+        <div class="footer__contacts">
+          <a class="footer__phone" href="tel:+74954886528">
+            <span>Телефон:</span> +7 (495) 488 65 28
+          </a>
+          <a class="footer__mail" href="mailto:weldertechs@gmail.com">
+            <span>E-mail:</span> weldertechs@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>© 2022 Все права защищены</p>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

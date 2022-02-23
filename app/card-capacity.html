@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Favicon -->
- <link rel="shortcut icon" href="images/logo-small.png" type="image/x-icon">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/logo-small.png" type="image/x-icon" />
 
- <!-- Link Swiper's CSS -->
- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
- <!-- nouislider -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css" />
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
 
- <!-- Custom Link -->
- <link rel="stylesheet" href="css/style.min.css">
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
 
     <title>Сварочные Технологии</title>
   </head>
@@ -23,6 +33,120 @@
     <h1 class="visually-hidden">Ёмкостное оборудование</h1>
     <div class="site-wrapper">
       <header class="header">
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <a class="mobile-menu__logo logo" href="#">
+      <img src="images/logo.png" alt="Логотип" />
+    </a>
+
+    <button class="mobile-menu__close" type="button" aria-label="Закрыть меню">
+      <svg width="19" height="19">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu__body">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Главная</a>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Услуги
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Изготовление емкостей
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Изготовление трубопроводов
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Сварка</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <div class="mobile-menu-box accordion">
+          <button
+            class="mobile-menu-box__name accordion__control"
+            type="button"
+          >
+            Каталог
+          </button>
+
+          <div class="mobile-menu-box__content accordion__content">
+            <ul class="mobile-menu-box__list">
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Горизонтальные емкости
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Вертикальные емкости
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Подземные емкости</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Воздухосборники</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Для хранения пенообразователя
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Баки-дозаторы пожаротушения
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Баки мембранные</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Жироуловители</a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">
+                  Для приемки и хранениях молока
+                </a>
+              </li>
+              <li class="mobile-menu-box__item">
+                <a class="mobile-menu-box__link" href="#">Емкости ЦКТ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Наши проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О нас контакты</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__bottom">
+      <button class="mobile-menu__btn btn" type="button">
+        Заказать звонок
+      </button>
+    </div>
+  </div>
+
   <div class="container">
     <nav class="main-menu">
       <a href="#" class="header__logo logo">
@@ -130,276 +254,16 @@
           <div class="container">
             <div class="grid__content">
               <div class="grid__sidebar">
-                <aside class="sidebar sidebar--catalog">
-  <div class="sidebar__top">
-    <h3 class="sidebar__title">Каталог</h3>
-  </div>
-  <ul class="sidebar__list">
-    <li class="sidebar__item">
-      <a class="sidebar__link sidebar__link--active" href="#">
-        <span>Горизонтальные емкости</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Вертикальные емкости</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Подземные емкости</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Воздухосборники</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Для хранения пенообразователя</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Баки-дозаторы пожаротушения</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Баки мембранные</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Жироуловители</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Для приемки и хранениях молока</span>
-      </a>
-    </li>
-    <li class="sidebar__item">
-      <a class="sidebar__link" href="#">
-        <span>Емкости ЦКТ</span>
-      </a>
-    </li>
-  </ul>
-</aside>
-
+                
               </div>
               <div class="grid__right">
-                <section class="product">
-  <div class="container">
-    <div class="product__wrapper">
-      <div class="product__slider">
-        <div class="slider-thumbs">
-          <div class="slider-thumbs__wrap">
-            <div class="slider-thumbs__nav swiper" id="slider-nav">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/1.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/2.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/3.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/4.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/1.jpg" alt="Слайд №1" />
-                </li>
-                <li class="swiper-slide slider-nav__slide">
-                  <img src="images/content/capacity/2.jpg" alt="Слайд №1" />
-                </li>
-              </ul>
-            </div>
-            <div class="slider-thumbs__arrows">
-              <button
-                class="swiper-button-prev"
-                type="button"
-                aria-label="Предыдущий"
-              ></button>
-              <button
-                class="swiper-button-next"
-                type="button"
-                aria-label="Следующий"
-              ></button>
-            </div>
-          </div>
-
-          <div class="slider-thumbs__main swiper" id="slider-main">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №1" />
-              </li>
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №2" />
-              </li>
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №3" />
-              </li>
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №4" />
-              </li>
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №4" />
-              </li>
-              <li class="swiper-slide">
-                <img src="images/content/capacity/1-big.jpg" alt="Слайд №4" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
+                
               </div>
             </div>
-            <div class="container">
-  <div class="product__tabs-spec tabs-spec">
-    <div class="tabs-spec__top">
-      <ul class="tabs-spec__list">
-        <li class="tabs-spec__item">
-          <button class="tabs-spec__btn tabs-spec__btn--active">
-            Описание
-          </button>
-        </li>
-        <li class="tabs-spec__item">
-          <button class="tabs-spec__btn">Характеристики</button>
-        </li>
-        <li class="tabs-spec__item">
-          <button class="tabs-spec__btn">Чертежи</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="tabs-spec__content active">
-      <div class="tabs-spec__text">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-      </div>
-    </div>
-    <div class="tabs-spec__content active">
-      <div class="tabs-spec__text">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries.
-        </p>
-      </div>
-    </div>
-    <div class="tabs-spec__content active">
-      <div class="tabs-spec__text">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and
-        </p>
-      </div>
-    </div>
-  </div>
-  <button class="product__btn btn" type="button">ЗАКАЗАТЬ ТАКУЮ ЕМКОСТЬ</button>
-</div>
-
+            
           </div>
         </div>
-        <section class="contacts">
-  <div class="container">
-    <div class="contacts__top">
-      <h2 class="contacts__title section-title">
-        <span class="section-title__underline">Свяжитесь с нами</span>
-      </h2>
-    </div>
-    <ul class="contacts__list">
-      <li class="contacts__item">
-        <a class="contacts__link contacts__link--phone" href="tel:+74951234567">
-          <span class="contacts__label">Телефон:</span>
-          8 (495) 123 45 67
-        </a>
-      </li>
-      <li class="contacts__item">
-        <div class="contacts__link contacts__link--location" href="#">
-          <span class="contacts__label">Адрес:</span>
-          Москва, Название улицы 10, офис 11
-        </div>
-      </li>
-      <li class="contacts__item">
-        <a
-          class="contacts__link contacts__link--schedule"
-          href="mailto:info@autotradis.ru"
-        >
-          <span class="contacts__label">Режим работы:</span>пн - пт с 09:00 до
-          19:00, сб - вс - выходные
-        </a>
-      </li>
-      <li class="contacts__item">
-        <div class="contacts__socials socials">
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a
-                href="#"
-                class="socials__link socials__link--instagram"
-                aria-label="instagram"
-              ></a>
-            </li>
-            <li class="socials__item">
-              <a
-                href="#"
-                class="socials__link socials__link--whatsapp"
-                aria-label="whatsapp"
-              ></a>
-            </li>
-            <li class="socials__item">
-              <a
-                href="#"
-                class="socials__link socials__link--telegram"
-                aria-label="telegram"
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <div class="contacts__map map">
-      <iframe
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a059d9111ae1df67351251cdfa5eaf67fe1ea4c5c7efd377930f089402a57f2&amp;source=constructor"
-        width="100%"
-        height="410"
-        frameborder="0"
-      ></iframe>
-    </div>
-  </div>
-</section>
-
+        
       </main>
       <footer class="footer">
   <div class="container">
@@ -486,16 +350,20 @@
 
     </div>
 
-      <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- nouislider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
 
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  <!-- JS -->
-  <script src="js/main.min.js"></script>
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
   </body>
 </html>

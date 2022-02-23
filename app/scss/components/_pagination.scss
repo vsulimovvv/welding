@@ -1,0 +1,24 @@
+.pagination {
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  &__link {
+    display: block;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 13px 16px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    transition: 150ms ease;
+
+    &--active,
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+  }
+}

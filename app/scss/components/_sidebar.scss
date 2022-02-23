@@ -1,7 +1,6 @@
 .sidebar {
   max-width: 340px;
   width: 100%;
-  @include adaptive-value('margin-top', 60, 40, 1);
   background-color: var(--color-bg);
   padding-bottom: 65px;
 
@@ -31,6 +30,7 @@
     padding: 20px;
     padding-left: 70px;
     position: relative;
+    transition: 150ms ease;
 
     &::after {
       @include elDef();
@@ -44,9 +44,11 @@
         contain
       );
       background-color: #c5c5c5;
+      transition: 150ms ease;
     }
 
-    &--active {
+    &--active,
+    &:hover {
       background-color: var(--color-accent);
       color: var(--color-white);
       &::after {

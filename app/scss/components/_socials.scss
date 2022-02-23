@@ -15,6 +15,7 @@
     transition: background-color 150ms ease;
     border: 1px solid var(--color-eccent);
     transition: 150ms ease;
+    border: 1px solid transparent;
 
     @include breakpointsMaxW($bp-768) {
       width: 34px;
@@ -24,6 +25,7 @@
     &:hover {
       background-color: var(--color-white);
       border-color: #d2d2d2;
+      border-color: var(--color-accent);
 
       &::after {
         background-color: var(--color-accent);

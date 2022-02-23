@@ -4,7 +4,7 @@
     align-items: center;
     gap: 25px;
 
-    @include breakpointsMaxW($bp-container) {
+    @include breakpointsMaxW($bp-991) {
       display: none;
     }
   }
@@ -16,6 +16,10 @@
   &__link {
     padding-right: 15px;
     position: relative;
+
+    &:hover {
+      color: var(--color-accent);
+    }
 
     &--dropdown {
       .menu__link {

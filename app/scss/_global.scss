@@ -118,7 +118,7 @@ body {
 }
 
 .grid {
-  position: relative;
+  @include adaptive-value('padding-top', 70, 40, 1);
 
   &__content {
     display: grid;
@@ -127,6 +127,7 @@ body {
 
     @include breakpointsMaxW($bp-container) {
       gap: 30px;
+      grid-template-columns: minmax(auto, 300px) 1fr;
     }
 
     @include breakpointsMaxW($bp-991) {
@@ -138,10 +139,6 @@ body {
   &__right {
     .container {
       padding: 0;
-    }
-
-    @include breakpointsMaxW($bp-991) {
-      // padding-top: 450px;
     }
   }
 }

@@ -1,6 +1,6 @@
 .header {
   border-bottom: 1px solid #eaeaea;
-  
+
   &__toggle {
     display: block;
     flex-shrink: 0;
@@ -62,7 +62,8 @@
     display: flex;
     align-items: center;
     gap: 17px;
-    @include breakpointsMaxW($bp-991) {
+
+    @include breakpointsMaxW($bp-container) {
       display: none;
     }
   }
@@ -73,6 +74,15 @@
     padding-left: 43px;
     position: relative;
 
+    &:hover {
+      .icon {
+        background-color: var(--color-accent);
+        &::after {
+          background-color: var(--color-white);
+        }
+      }
+    }
+
     .icon {
       position: absolute;
       width: 32px;
@@ -82,8 +92,10 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      transition: 150ms ease;
 
       &::after {
+        transition: 150ms ease;
         @include elDef();
         top: 50%;
         left: 50%;

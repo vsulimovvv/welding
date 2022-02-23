@@ -1,50 +1,55 @@
 .catalog {
+  &__filters {
+    margin-bottom: 40px;
+  }
   &__list {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 10px;
+    @include adaptive-value('margin-bottom', 80, 40, 1);
 
     @include breakpointsMaxW($bp-768) {
-      flex-direction: column;
-      align-items: flex-start;
+      grid-template-columns: repeat(2, 1fr);
     }
-
-    &:not(:last-child) {
-      margin-bottom: 25px;
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
     }
   }
 
   &__item {
+    max-width: 290px;
+    justify-self: center;
+  }
+}
+
+.catalog-card {
+  max-width: 287px;
+  width: 100%;
+  height: 100%;
+
+  &__img {
     width: 100%;
-    height: 100%;
+    height: 295px;
+    margin-bottom: 23px;
 
-    &--big {
-      max-width: 730px;
-
-      @include breakpointsMaxW($bp-768) {
-        max-width: 100%;
-      }
+    @include breakpointsMaxW($bp-container) {
+      height: calc(220px + (295 - 220) * ((100vw - 991px) / (1270 - 991)));
+    }
+    @include breakpointsMaxW($bp-991) {
+      height: calc(220px + (295 - 220) * ((100vw - 375px) / (991 - 375)));
     }
 
-    &--small {
-      max-width: 484px;
-      @include breakpointsMaxW($bp-768) {
-        max-width: 100%;
-      }
+    img {
+      @include img(cover);
     }
   }
 
-  &--small {
-    .product-card {
-      &__title {
-        font-size: 20px;
-        margin-bottom: 17px;
-        max-width: 230px;
-      }
-      &__text {
-        font-size: 12px;
-        max-width: 230px;
-      }
+  &__title {
+    font-size: 14px;
+    color: #4c4c4c;
+
+    &:hover {
+      color: var(--color-black);
     }
   }
 }

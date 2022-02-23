@@ -59,8 +59,17 @@
       padding-left: 0;
       font-size: 21px;
       @include adaptive-value('font-size', 21, 16, 1);
+
       &::after {
         display: none;
+      }
+
+      &:hover {
+        color: var(--color-accent);
+        
+        .contacts__label {
+          color: var(--color-dark);
+        }
       }
     }
 
