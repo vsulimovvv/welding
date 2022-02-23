@@ -31,7 +31,6 @@
     padding-left: 70px;
     position: relative;
     transition: 150ms ease;
-
     &::after {
       @include elDef();
       width: 22px;
@@ -39,12 +38,35 @@
       left: 35px;
       top: 50%;
       transform: translateY(-50%);
-      @include maskImage(
-        url('../images/content/services/icons/1.svg'),
-        contain
-      );
       background-color: #c5c5c5;
       transition: 150ms ease;
+    }
+    
+    &--capacity {
+      &::after {
+        @include maskImage(
+          url('../images/content/services/icons/1.svg'),
+          contain
+        );
+      }
+    }
+
+    &--pipelines {
+      &::after {
+        @include maskImage(
+          url('../images/content/services/icons/2.svg'),
+          contain
+        );
+      }
+    }
+
+    &--welding {
+      &::after {
+        @include maskImage(
+          url('../images/content/services/icons/3.svg'),
+          contain
+        );
+      }
     }
 
     &--active,
@@ -67,7 +89,12 @@
     padding-bottom: 0;
 
     .sidebar {
+      &__list {
+        margin-bottom: 0px;
+      }
+
       &__link {
+        padding: 15px;
         padding-left: 40px;
 
         &::after {

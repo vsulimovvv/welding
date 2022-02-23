@@ -23,26 +23,36 @@
       @include adaptive-value('width', 137, 100, 1);
       @include adaptive-value('height', 243, 200, 1);
       right: 33px;
-      top: 88px;
+      bottom: 44px;
+
+      @include breakpointsMaxW($bp-768) {
+        bottom: 0;
+      }
     }
   }
 
-  &--pipeline {
-    .services-card__preview {
-      @include adaptive-value('width', 250, 190, 1);
-      @include adaptive-value('height', 230, 180, 1);
-      right: 0;
-      top: 90px;
-      @include adaptive-value('top', 90, 140, 1);
-    }
-  }
-
+  &--pipeline,
   &--welding {
     .services-card__preview {
       width: 250px;
       height: 230px;
       right: 0;
-      top: 90px;
+      bottom: 30px;
+      
+      @include breakpointsMaxW($bp-container) {
+        width: calc(170px + (250 - 170) * ((100vw - 991px) / (1270 - 991)));
+        height: calc(170px + (250 - 170) * ((100vw - 991px) / (1270 - 991)));
+      }
+
+      @include breakpointsMaxW($bp-991) {
+        width: 250px;
+        height: 230px;
+      }
+
+      @include breakpointsMaxW($bp-576) {
+        width: 190px;
+        height: 180px;
+      }
     }
   }
 
@@ -51,7 +61,7 @@
     margin-bottom: 27px;
     line-height: 1.25;
   }
-  
+
   &__link {
     margin-top: auto;
     font-size: 18px;
@@ -60,7 +70,14 @@
     position: relative;
     padding-right: 40px;
 
+    &:hover {
+      &::after {
+        transform: translateY(-50%) translateX(5px);
+      }
+    }
+
     &::after {
+      transition: 150ms ease;
       @include elDef();
       width: 30px;
       height: 16px;

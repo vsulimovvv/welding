@@ -2,6 +2,12 @@
   @include adaptive-value('padding-bottom', 75, 50, 1);
   @include adaptive-value('padding-top', 75, 50, 1);
 
+  &--small-title {
+    .about__title {
+      @include adaptive-value('font-size', 30, 20, 1);
+    }
+  }
+
   &__title {
     @include adaptive-value('margin-bottom', 35, 25, 1);
     font-weight: 500;
@@ -20,12 +26,13 @@
     @include adaptive-value('gap', 85, 20, 1);
 
     @include breakpointsMaxW($bp-768) {
-      grid-template-columns:  1fr;
+      grid-template-columns: 1fr;
     }
   }
 
   &__item {
-    font-size: 17px;
+    @include adaptive-value('font-size', 17, 15, 1);
+
     span {
       display: block;
       font-weight: 700;

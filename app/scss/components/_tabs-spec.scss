@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    @include breakpointsMaxW($bp-768) {
+      gap: 16px;
+    }
   }
 
   &__btn {
@@ -16,6 +19,9 @@
     font-weight: 700;
     transition: 150ms ease;
     position: relative;
+    @include breakpointsMaxW($bp-768) {
+      font-size: 16px;
+    }
 
     &::after {
       @include elDef();

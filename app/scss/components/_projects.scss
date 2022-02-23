@@ -36,5 +36,17 @@
     padding: 20px;
     text-align: center;
     margin: 0 auto;
+    transition: 150ms ease;
+
+    &:hover {
+      transform: translateY(5px);
+      background-color: var(--color-accent);
+      color: var(--color-white);
+      border-style: solid;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
   }
 }
