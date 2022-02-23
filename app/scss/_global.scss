@@ -122,14 +122,16 @@ body {
 
   &__content {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(auto, 340px) 1fr;
     gap: 40px;
 
     @include breakpointsMaxW($bp-container) {
       gap: 30px;
     }
+
     @include breakpointsMaxW($bp-991) {
       grid-template-columns: 1fr;
+      gap: 0;
     }
   }
 

@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+
   // * ===== Slider
   (function sliderReviews() {
     const sliderEl = document.querySelector('.reviews__slider');
@@ -25,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
       },
     });
   })();
+
   // * ===== Slider
   (function sliderDescr() {
     const sliderEl = document.querySelector('.descr__slider');
@@ -34,6 +36,43 @@ window.addEventListener('DOMContentLoaded', () => {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+    });
+  })();
+
+  // * ==== Single Product
+  (function verticalSlider() {
+    let mySwiperNav = new Swiper('#slider-nav', {
+      slidesPerView: 'auto',
+      spaceBetween: 12,
+      direction: 'vertical',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+
+      breakpoints: {
+        320: {
+          direction: 'horizontal',
+        },
+        768: {
+          direction: 'vertical',
+        },
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    let mySwiper = new Swiper('#slider-main', {
+      // navigation: {
+      //   nextEl: arrowNext,
+      //   prevEl: arrowPrev,
+      // },
+      spaceBetween: 10,
+      loopedSlides: 4,
+      thumbs: {
+        swiper: mySwiperNav,
       },
     });
   })();
@@ -147,52 +186,52 @@ window.addEventListener('DOMContentLoaded', () => {
   //   bindModal('.presentation__download', '.popup--get-info', '.popup__close');
   // })();
 
-  // // * ===== Toggle Tabs
-  // function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
-  //   const header = document.querySelectorAll(headerSelector);
-  //   const tab = document.querySelectorAll(tabSelector);
-  //   const content = document.querySelectorAll(contentSelector);
+  // * ===== Toggle Tabs
+  function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
+    const header = document.querySelectorAll(headerSelector);
+    const tab = document.querySelectorAll(tabSelector);
+    const content = document.querySelectorAll(contentSelector);
 
-  //   if (header) {
-  //     hideTabContent();
-  //     showTabContent();
+    if (header) {
+      hideTabContent();
+      showTabContent();
 
-  //     function hideTabContent() {
-  //       content.forEach((item) => {
-  //         item.classList.remove('active');
-  //       });
-  //       tab.forEach((item) => {
-  //         item.classList.remove(activeClass);
-  //       });
-  //     }
+      function hideTabContent() {
+        content.forEach((item) => {
+          item.classList.remove('active');
+        });
+        tab.forEach((item) => {
+          item.classList.remove(activeClass);
+        });
+      }
 
-  //     function showTabContent(i = 0) {
-  //       content[i].classList.add('active');
-  //       tab[i].classList.add(activeClass);
-  //     }
+      function showTabContent(i = 0) {
+        content[i].classList.add('active');
+        tab[i].classList.add(activeClass);
+      }
 
-  //     header.forEach((item) => {
-  //       if (item) {
-  //         item.addEventListener('click', (e) => {
-  //           const target = e.target;
+      header.forEach((item) => {
+        if (item) {
+          item.addEventListener('click', (e) => {
+            const target = e.target;
 
-  //           if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-  //             tab.forEach((item, i) => {
-  //               if (target == item || target.parentNode == item) {
-  //                 hideTabContent();
-  //                 showTabContent(i);
-  //               }
-  //             });
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  // }
-  // someTabs(
-  //   '.planning__content',
-  //   '.planning__nav-btn',
-  //   '.planning__panel',
-  //   'planning__nav-btn--active'
-  // );
+            if (target.classList.contains(tabSelector.replace(/\./, ''))) {
+              tab.forEach((item, i) => {
+                if (target == item || target.parentNode == item) {
+                  hideTabContent();
+                  showTabContent(i);
+                }
+              });
+            }
+          });
+        }
+      });
+    }
+  }
+  someTabs(
+    '.tabs-spec',
+    '.tabs-spec__btn',
+    '.tabs-spec__content',
+    'tabs-spec__btn--active'
+  );
 });

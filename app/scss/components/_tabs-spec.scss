@@ -1,0 +1,58 @@
+.tabs-spec {
+  &__top {
+    padding-bottom: 24px;
+    border-bottom: 2px solid #e5e5e5;
+    position: relative;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__btn {
+    font-size: 19px;
+    color: #b5b5b5;
+    font-weight: 700;
+    transition: 150ms ease;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-accent);
+      bottom: -25px;
+      left: 0;
+      transform: scaleX(0);
+      transform-origin: left;
+      width: 100%;
+      transition: 150ms ease;
+    }
+
+    &--active,
+    &:hover {
+      color: var(--color-accent);
+    }
+    &--active {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__content {
+    @include adaptive-value('padding-top', 40, 25, 1);
+    display: none;
+
+    &.active {
+      display: block;
+      animation: opacity-visibility 700ms ease forwards;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #282828;
+  }
+}
