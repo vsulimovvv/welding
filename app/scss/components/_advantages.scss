@@ -63,6 +63,10 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  @include breakpointsMaxW($bp-768) {
+    display: none;
+  }
 }
 
 .circular-slider {
@@ -74,6 +78,7 @@
   justify-content: center;
   overflow: hidden;
   width: 100%;
+  min-height: 500px;
 
   .wrapper {
     box-sizing: border-box;
@@ -84,6 +89,7 @@
     padding: 20px 20px 0px 20px;
     position: relative;
     max-width: 600px;
+    padding-bottom: 50px;
 
     .controls {
       &__control {
@@ -142,6 +148,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 100;
     }
 
     .slides-holder__item_active {

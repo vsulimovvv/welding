@@ -250,25 +250,6 @@
 </header>
 
 
-      <!-- <div class="breadcrumbs breadcrumbs--left">
-        <div class="container">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Главная</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#"> Женщинам </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Пальто женское</a>
-            </li>
-          </ul>
-        </div>
-      </div> -->
-
       <main class="main">
         <section
   class="hero-about"
@@ -371,7 +352,6 @@
         </p>
       </div>
     </div>
-    <!-- https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 -->
     <div class="reviews__content">
       <div class="reviews__slider swiper">
         <ul class="reviews__slides swiper-wrapper">
@@ -422,10 +402,18 @@
         <div class="swiper-pagination"></div>
       </div>
 
-      <button class="reviews__arrows">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </button>
+      <div class="reviews__arrows">
+        <button
+          class="swiper-button-prev"
+          type="button"
+          aria-label="Следующий"
+        ></button>
+        <button
+          class="swiper-button-next"
+          type="button"
+          aria-label="Предыдущий"
+        ></button>
+      </div>
     </div>
   </div>
 </section>
@@ -553,7 +541,7 @@
         </a>
       </li>
       <li class="contacts__item">
-        <div class="contacts__link contacts__link--location" href="#">
+        <div class="contacts__link contacts__link--location">
           <span class="contacts__label">Адрес:</span>
           Москва, Название улицы 10, офис 11
         </div>
@@ -598,9 +586,8 @@
     <div class="contacts__map map">
       <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A7a059d9111ae1df67351251cdfa5eaf67fe1ea4c5c7efd377930f089402a57f2&amp;source=constructor"
-        width="100%"
+        width="1920"
         height="410"
-        frameborder="0"
       ></iframe>
     </div>
   </div>
