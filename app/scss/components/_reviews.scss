@@ -3,6 +3,39 @@
   @include adaptive-value('padding-bottom', 70, 40, 1);
 
   background-color: var(--color-bg);
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    @include elDef();
+    width: 650px;
+    background-color: var(--color-accent);
+    height: 276px;
+    left: 0;
+    top: 0;
+    border-radius: 0px 50px 0px 0px;
+    z-index: -1;
+
+    @include breakpointsMinW(1920px) {
+      width: 35%;
+    }
+
+    @include breakpointsMaxW(1920px) {
+      width: calc(250px + (650 - 250) * ((100vw - 991px) / (1920 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      display: none;
+    }
+  }
+
+  &__title {
+    color: var(--color-white);
+
+    @include breakpointsMaxW($bp-991) {
+      color: var(--color-dark);
+    }
+  }
 
   &__top {
     display: flex;
@@ -41,7 +74,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include maskImage(url('../images/icons/chevron.svg'), contain);
-        background-color: var(--color-dark);
+        background-color: var(--color-white);
+
+        @include breakpointsMaxW($bp-991) {
+          background-color: var(--color-dark);
+        }
       }
     }
     .swiper-button-prev {
@@ -70,6 +107,7 @@
   &__slide {
     max-width: 350px;
     width: 100%;
+    height: 470px;
 
     img {
       @include img(cover);
