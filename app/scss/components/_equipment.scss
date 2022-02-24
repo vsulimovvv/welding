@@ -1,0 +1,117 @@
+.equipment {
+  background-color: var(--color-bg);
+  @include adaptive-value('padding-top', 65, 40, 1);
+  @include adaptive-value('padding-bottom', 65, 40, 1);
+  background-color: var(--color-accent);
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    @include elDef();
+    height: calc(100% - 40px);
+    width: 1450px;
+    background-color: var(--color-bg);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: -1;
+    border-radius: 0px 0px 50px 0px;
+
+    @include breakpointsMaxW(1920px) {
+      width: calc(1000px + (1450 - 1000) * ((100vw - 1270px) / (1920 - 1270)));
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1050px;
+    background-color: var(--color-bg);
+
+    @include breakpointsMaxW(1920px) {
+      max-width: calc(900px + (1050 - 900) * ((100vw - 1270px) / (1920 - 1270)));
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      max-width: 100%;
+      padding: 50px;
+      border-radius: 0px 0px 50px 0px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 30px 15px 15px 15px;
+      border-radius: 5px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    gap: 70px;
+    @include adaptive-value('margin-bottom', 40, 30, 1);
+    @include adaptive-value('gap', 70, 30, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__list {
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptive-value('gap', 55, 20, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: var(--color-white);
+    padding: 25px 25px 25px 55px;
+    position: relative;
+    @include breakpointsMaxW($bp-768) {
+      padding: 15px 15px 15px 35px;
+    }
+  }
+
+  &__fonr-medium {
+    line-height: 1.4;
+    font-weight: 500;
+    display: block;
+    @include adaptive-value('margin-bottom', 20, 10, 1);
+    @include adaptive-value('font-size', 21, 18, 1);
+  }
+
+  &__counter {
+    position: absolute;
+    color: var(--color-white);
+    background-color: var(--color-accent);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    left: -16px;
+
+    &::after {
+      @include elDef();
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px dashed var(--color-accent);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__descr {
+    font-size: 16px;
+  }
+}

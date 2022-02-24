@@ -11,4 +11,88 @@
     font-size: 17px;
     @include adaptive-value('margin-bottom', 55, 30, 1);
   }
+
+  &--column {
+    background-color: var(--color-accent);
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      @include elDef();
+      height: calc(100% - 40px);
+      width: 1450px;
+      background-color: var(--color-bg);
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      z-index: -1;
+
+      @include breakpointsMaxW(1920px) {
+        width: calc(1000px + (1450 - 1000) * ((100vw - 1270px) / (1920 - 1270)));
+      }
+
+      @include breakpointsMaxW($bp-container) {
+        display: none;
+      }
+    }
+
+    .send {
+      &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        max-width: 800px;
+        gap: 46px;
+        background-color: var(--color-bg);
+        border-radius: 5px;
+        position: relative;
+
+        &::after {
+          @include elDef();
+          width: 513px;
+          height: 390px;
+          right: -520px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          background-image: url('../images/content/send-bg.png');
+
+          @include breakpointsMaxW(1920px) {
+            width: calc(300px + (513 - 300) * ((100vw - 991px) / (1920 - 991)));
+            height: calc(
+              300px + (390 - 300) * ((100vw - 991px) / (1920 - 991))
+            );
+            right: calc(
+              -300px + (-520 - (-300)) * ((100vw - 991px) / (1920 - 991))
+            );
+          }
+
+          @include breakpointsMaxW($bp-container) {
+            display: none;
+          }
+        }
+
+        @include breakpointsMaxW($bp-container) {
+          padding: 50px;
+          max-width: 100%;
+        }
+
+        @include breakpointsMaxW($bp-768) {
+          padding: 30px 15px 15px 15px;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      &__top {
+        max-width: 340px;
+        width: 100%;
+
+        @include breakpointsMaxW($bp-container) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }

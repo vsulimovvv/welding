@@ -1,6 +1,13 @@
 .form-send {
   width: 100%;
 
+  &--column {
+    .form-send__top {
+      grid-template-columns: 1fr;
+      gap: 19px;
+    }
+  }
+
   &__top {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
