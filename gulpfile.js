@@ -79,8 +79,7 @@ function styles() {
 
 function scripts() {
   return src([
-      'app/js/main.js',
-      'app/js/slider-circle.js'
+      'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
